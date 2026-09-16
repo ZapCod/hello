@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NOVA · 探索无限</title>
+	<style>
+		:root { --bg:#070914; --muted:#9aa2c5; --white:#f6f7ff; --cyan:#55e7ff; --violet:#8f6bff; }
+		* { box-sizing:border-box; margin:0; padding:0; }
+		body { min-height:100vh; color:var(--white); font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); overflow-x:hidden; }
+		body::before { content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:56px 56px; mask-image:linear-gradient(to bottom,black,transparent 90%); }
+		.orb { position:fixed; border-radius:50%; filter:blur(10px); opacity:.45; pointer-events:none; }
+		.orb.one { width:420px; height:420px; top:-160px; left:-100px; background:#4732bc; }
+		.orb.two { width:360px; height:360px; right:-100px; bottom:-140px; background:#007eac; }
+		nav { max-width:1180px; margin:auto; padding:28px 28px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; }
+		.logo { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.16em; }
+		.logo-mark { width:30px; height:30px; display:grid; place-items:center; border:1px solid var(--cyan); color:var(--cyan); transform:rotate(45deg); box-shadow:0 0 22px #55e7ff66; }
+		.logo-mark span { transform:rotate(-45deg); }
+		nav a { color:var(--muted); text-decoration:none; margin-left:30px; font-size:14px; transition:.25s; }
+		nav a:hover { color:var(--cyan); }
+		.nav-btn { color:var(--white)!important; border:1px solid #ffffff30; border-radius:30px; padding:11px 20px; }
+		main { max-width:1180px; margin:auto; padding:95px 28px 70px; position:relative; z-index:1; }
+		.eyebrow { color:var(--cyan); font-size:12px; letter-spacing:.28em; text-transform:uppercase; margin-bottom:24px; }
+		h1 { max-width:800px; font-size:clamp(54px,9vw,116px); line-height:.94; letter-spacing:-.07em; font-weight:800; }
+		h1 em { font-style:normal; color:transparent; background:linear-gradient(100deg,var(--cyan),#b9a1ff 75%); background-clip:text; -webkit-background-clip:text; }
+		.intro { max-width:500px; color:var(--muted); line-height:1.8; font-size:17px; margin:32px 0; }
+		.actions { display:flex; gap:14px; align-items:center; }
+		.btn { display:inline-block; padding:15px 25px; border-radius:7px; text-decoration:none; color:#07101a; font-weight:700; background:linear-gradient(100deg,var(--cyan),#b3a3ff); box-shadow:0 0 28px #55e7ff2e; }
+		.btn.alt { color:var(--white); background:transparent; border:1px solid #ffffff2c; box-shadow:none; }
+		.stats { margin-top:110px; display:flex; gap:70px; border-top:1px solid #ffffff18; padding-top:24px; }
+		.stat strong { display:block; font-size:25px; } .stat span { color:var(--muted); font-size:12px; }
+		.planet { position:absolute; right:9%; top:100px; width:310px; height:310px; border-radius:50%; background:radial-gradient(circle at 35% 28%,#d4c6ff 0 2%,#8066ff 12%,#2a1d75 45%,#100d30 72%); box-shadow:inset -35px -15px 55px #02030b,0 0 80px #624dff55; animation:float 6s ease-in-out infinite; }
+		.planet::after { content:""; position:absolute; width:440px; height:78px; left:-65px; top:112px; border:2px solid #8c83ff99; border-radius:50%; transform:rotate(-20deg); box-shadow:0 0 20px #8c83ff55; }
+		@keyframes float { 50% { transform:translateY(-16px) rotate(3deg); } }
+		@media (max-width:700px) { nav a:not(.nav-btn) { display:none; } main { padding-top:65px; } .planet { opacity:.35; right:-120px; top:110px; } .stats { gap:28px; margin-top:75px; } .stat strong { font-size:20px; } }
+	</style>
+</head>
+<body>
+	<div class="orb one"></div><div class="orb two"></div>
+	<nav>
+		<div class="logo"><div class="logo-mark"><span>✦</span></div>NOVA</div>
+		<div><a href="#vision">理念</a><a href="#signal">信号</a><a href="#contact" class="nav-btn">加入探索 ↗</a></div>
+	</nav>
+	<main id="vision">
+		<div class="planet"></div>
+		<p class="eyebrow">未来正在加载 · 01 / 04</p>
+		<h1>把想象<br>变成 <em>现实。</em></h1>
+		<p class="intro">NOVA 是一场关于创意、科技与未知的实验。打破边界，连接灵感，和我们一起定义下一个时代。</p>
+		<div class="actions"><a class="btn" href="#signal">开始探索 →</a><a class="btn alt" href="#contact">了解更多</a></div>
+		<div class="stats" id="signal"><div class="stat"><strong>∞</strong><span>无限可能</span></div><div class="stat"><strong>24/7</strong><span>持续连接</span></div><div class="stat"><strong>2030+</strong><span>未来坐标</span></div></div>
+	</main>
+</body>
+</html>
