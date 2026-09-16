@@ -13,3 +13,19 @@ python3 server.py
 ```bash
 PORT=8080 python3 server.py
 ```
+
+## 使用 Docker
+
+构建镜像：
+
+```bash
+docker build -t hello-homepage .
+```
+
+启动容器：
+
+```bash
+docker run --rm -p 8000:8000 hello-homepage
+```
+
+然后访问 <http://localhost:8000/>。
